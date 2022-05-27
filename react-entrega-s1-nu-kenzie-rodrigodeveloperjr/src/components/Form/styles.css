@@ -1,0 +1,124 @@
+.formulario {
+    width: 100%;
+    max-width: 363px;
+    height: 351px;
+    border: 1px solid #E9ECEF;
+    border-radius: 4px;
+    padding: 35px 20px 20px 20px;
+    gap: 19px;
+
+    box-sizing: border-box;
+}
+
+.inputDescricao {
+    background: #F8F9FA;
+    border: 2px solid #F8F9FA;
+    border-radius: 8px;
+    padding-left: 16px;
+    gap: 10px;
+
+    width: 92%;
+    height: 52.8px;
+    max-width: 300px;
+    margin-top: 10px;
+}
+
+span {
+    color: #868E96;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    margin: 0 5px;
+    display: flex;
+    justify-content: start;
+}
+
+label {
+    margin: 15px 0 5px 3px;
+}
+
+section {
+    display: flex;
+}
+
+section > div {
+    display: flex;
+    margin: 10px;
+}
+
+.divValor {
+    display: grid;
+    width: 100%;
+    max-width: 87px;
+    padding-right: 20px;
+}
+
+.divTipoValor {
+    display: grid;
+}
+
+.divValor > input {
+    padding: 0px 16px;
+    gap: 10px;
+    background: #F8F9FA;
+
+    border: 2px solid #F8F9FA;
+    border-radius: 8px;
+    
+    width: 80%;
+    max-width: 128px;
+    height: 48px;
+
+}
+
+.divTipoValor > select {
+    width: 100%;    
+    max-width: 150px;
+    height: 48px;
+
+    padding: 0px 16px;
+    gap: 10px;
+
+    background: #F8F9FA;
+
+    border: 2px solid #F8F9FA;
+    border-radius: 8px;
+}
+
+.divTipoValor > select:focus {
+    outline: none;
+}
+
+.inputDescricao:focus, .divValor > input:focus {
+    background: #FFFFFF;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+option {
+    width: 128px;
+    height: 35px;
+    background: #F8F9FA;
+}
+ 
+.botaoInserirValor {
+    padding: 13px 20px;
+    gap: 10px;
+
+    width: 100%;
+    max-width: 314px;
+    height: 48px;
+
+    background: #FD377E;
+
+    border: 2px solid #FD377E;
+    border-radius: 8px;
+
+    margin-top: 15px;
+
+    color: #fff;
+    cursor: pointer;
+}

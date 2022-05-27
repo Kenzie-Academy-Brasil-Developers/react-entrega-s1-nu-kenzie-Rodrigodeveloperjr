@@ -1,0 +1,49 @@
+.secaoValorTotal {
+    width: 100%;
+    max-width: 361px;
+    height: 96px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E9ECEF;
+    border-radius: 4px;
+
+    margin-top: 15px;
+
+    display: block;
+}
+
+.divValorTotal {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.textoValorMenor {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #5B6166;
+    padding-left: 20px;
+}
+
+.textoValorTotal, .valorTotal {
+    padding: 0 20px;
+}
+
+.valorTotal {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FD377E;
+}
+
+.imgCardVazio {
+    width: 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 580px) {
+    section h1 {
+        text-align: center;
+    }
+}

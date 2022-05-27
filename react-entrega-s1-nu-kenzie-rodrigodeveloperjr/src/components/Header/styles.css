@@ -1,0 +1,35 @@
+.header {
+    background: #F8F9FA;
+    box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-around;
+}
+
+.titulo {
+    width: 122.68px;
+    height: 19.53px;
+    margin-top: 28px;
+}
+
+.botaoInicio {
+    padding: 10px;
+    gap: 10px;
+
+    width: 64px;
+    height: 40px;
+    background: #E9ECEF;
+    border: 1.4px solid #E9ECEF;
+    border-radius: 8px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #5B6166;
+    cursor: pointer;
+}
+
+.botaoInicio {
+    margin: 20px;
+}
