@@ -37,7 +37,7 @@ function App() {
         <div className="dentroContainer">
           <Form addCard={ addCard } />
           { cards.length > 0 && (
-              <Money cards={ cards } /> 
+              <Money cards={ filterCards.length > 0 ? filterCards : cards } /> 
             )
           }
           

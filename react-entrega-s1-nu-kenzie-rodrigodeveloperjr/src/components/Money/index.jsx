@@ -8,7 +8,7 @@ const Money = ({ cards }) => {
             <div className="divValorTotal">
                 <h3 className="textoValorTotal">Valor Total:</h3>
 
-                <p className="valorTotal">$ {cards.reduce((valoAnterior, valorAtual) => valoAnterior + Number(valorAtual.valor), 0)}</p>
+                <p className="valorTotal">$ {cards.reduce((valoAnterior, valorAtual) => valoAnterior + Number(valorAtual.valor), 0).toFixed(2)}</p>
             </div>
 
             <span className="textoValorMenor">O valor se refere ao saldo</span>
