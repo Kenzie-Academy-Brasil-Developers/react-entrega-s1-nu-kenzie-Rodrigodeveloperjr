@@ -7,8 +7,14 @@
   display: flex;
   justify-content: center;
 
-  margin-top: 25px;
-  box-sizing: border-box;
+  flex-direction: row;
+
+  margin-top: 2.5rem;
+}
+
+.container > div {
+  max-width: 363px;
+  margin-right: 40px;
 }
 
 .dentroContainer {
@@ -19,6 +25,10 @@
 
   .container {
     flex-direction: column;
+  }
+
+  .container > div {
+    margin: 0 auto;
   }
 
   .dentroContainer {

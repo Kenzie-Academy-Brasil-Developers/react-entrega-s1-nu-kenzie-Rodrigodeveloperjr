@@ -1,4 +1,4 @@
-import card from "./NoCard.png"
+import card from "../../assets/NoCard.png"
 import "./styles.css"
 
 const List = ({ cards, setFilterCards, children }) => {
@@ -25,7 +25,7 @@ const List = ({ cards, setFilterCards, children }) => {
                     <>
                         <h1>Você ainda não possui nenhum lançamento</h1>
 
-                        <img className="imgCardVazio" src={card} />
+                        <img className="imgCardVazio" src={card} alt="Cards Vazios" />
                     </>
                 )
             }

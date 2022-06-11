@@ -1,5 +1,7 @@
 import { useState } from "react"
-import "./styles.css"
+import { TemaBotoes } from "../../styles/buttons"
+import { InputStyled, SelectStyled } from "../../styles/inputs"
+import { StyledForm } from "./style"
 
 const Form = ({ addCard}) => {
 
@@ -24,24 +26,28 @@ const Form = ({ addCard}) => {
 
     return (
 
-        <form className="formulario" onSubmit={ handleSubmit }>
-            <label>Descrição</label>
+        <StyledForm onSubmit={ handleSubmit }>
+            <div>
+                <label>Descrição</label>
 
-            <input 
-            autoComplete="off"
-            className="inputDescricao" 
-            type="text" 
-            name="descricao"
-            placeholder="Digite aqui sua descrição"
-            value={ descricao }
-            onChange={ (e) => setDescricao(e.target.value) } />
-            
-            <span>Ex: Compra de roupas</span>
+                <InputStyled
+                inputTamanho="g"
+                autoComplete="off"
+                className="inputDescricao" 
+                type="text" 
+                name="descricao"
+                placeholder="Digite aqui sua descrição"
+                value={ descricao }
+                onChange={ (e) => setDescricao(e.target.value) } />
+                
+                <span>Ex: Compra de roupas</span>
+            </div>
 
             <section>
-                <div className="divValor">
+                <div>
                     <label>Valor</label>
-                    <input 
+                    <InputStyled
+                    inputTamanho="p"
                     autoComplete="off"
                     type="number"
                     name="valor"
@@ -50,18 +56,18 @@ const Form = ({ addCard}) => {
                     onChange={ (e) => setValor(e.target.value) } />
                 </div>
                 
-                <div className="divTipoValor">
+                <div>
                     <label>Tipo de valor</label>
-                    <select name="options" onChange={ (e) => setOption(e.target.value) }>
+                    <SelectStyled name="options" onChange={ (e) => setOption(e.target.value) }>
                         <option name="entradas">Entradas</option>
                         <option name="despesas">Despesas</option>
-                    </select>
+                    </SelectStyled>
                 </div>
             </section>
 
-            <button onClick={ () => addCard(handleChange()) } className="botaoInserirValor">Inserir valor</button>
+            <TemaBotoes botaoTamanho="gg" botaoCor="normal" onClick={ () => addCard(handleChange()) }>Inserir valor</TemaBotoes>
 
-        </form>
+        </StyledForm>
     )
 }
 

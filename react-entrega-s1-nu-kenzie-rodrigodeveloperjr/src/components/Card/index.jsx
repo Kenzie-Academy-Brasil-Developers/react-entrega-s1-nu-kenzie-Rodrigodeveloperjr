@@ -1,5 +1,5 @@
-import "./styles.css"
-import lixeira from "./lixeira.png"
+import lixeira from "../../assets/lixeira.png"
+import { StyledCard } from "./style"
 
 const Card = ({ cards, handleCard }) => {
 
@@ -7,9 +7,9 @@ const Card = ({ cards, handleCard }) => {
 
         cards.map((card, i) => 
 
-            <div className="card" key={i}>
+            <StyledCard key={i}>
                 <hr style={ card.option === "Entradas" ? {background: "#03B898"}  : {background: "#E9ECEF"} } />
-                
+
                 <div className="divDentroCard">
                     <div className="divNomeCompra">
                         <h2 className="nomeCompra">{card.descricao}</h2>
@@ -20,10 +20,10 @@ const Card = ({ cards, handleCard }) => {
                     <div className="divPreco">
                         <span className="preco">R$ {card.valor}</span>
 
-                        <img onClick={ () => handleCard(card) } style={{backgroundImage: lixeira}} className="lixeira" />
+                        <img onClick={ () => handleCard(card) } alt="Lixeira" />
                     </div>
                 </div>
-            </div>
+            </StyledCard>
         )
     )
 }

@@ -6,6 +6,7 @@ import Form from "./components/Form"
 import Money from "./components/Money"
 import List from './components/List';
 import Card from "./components/Card"
+import { Switch, Route } from "react-router-dom";
 
 function App() {
 
@@ -14,7 +15,6 @@ function App() {
 
   /* lista Filtrada */
   const [filterCards, setFilterCards ] = useState([])
-
 
   const addCard = newCard => {
 
@@ -31,25 +31,32 @@ function App() {
   
   return (
 
-    <>
-      <Header />
-      <div className="container">
-        <div className="dentroContainer">
-          <Form addCard={ addCard } />
-          { cards.length > 0 && (
-              <Money cards={ filterCards.length > 0 ? filterCards : cards } /> 
-            )
-          }
-          
-        </div>
-        <List cards={ cards } setFilterCards={ setFilterCards } children={ <Card cards={ filterCards.length > 0 ? filterCards : cards } handleCard={ handleCard } /> } />
-      </div>
-    </>
+    <Switch>
 
-    /*
-    <Home/>
-    */
+      <Route exact path="/">
+        <Home/>
+      </Route>
+      
+      <Route exact path="/dashboard">
+        <Header />
+        
+        <div className="container">
+          
+          <div>
+            <Form addCard={ addCard } />
+
+            { cards.length > 0 && (
+                <Money cards={ filterCards.length > 0 ? filterCards : cards } /> 
+              )
+            }
+          </div>
+
+          <List cards={ cards } setFilterCards={ setFilterCards } children={ <Card cards={ filterCards.length > 0 ? filterCards : cards } handleCard={ handleCard } /> } />  
+        </div>
+      
+      </Route>
+    </Switch>
     )
 }
 
-export default App;
+export default App
