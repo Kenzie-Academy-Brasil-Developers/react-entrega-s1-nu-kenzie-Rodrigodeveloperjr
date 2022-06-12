@@ -29,6 +29,12 @@ export const StyledForm = styled.form`
         flex-direction: row;
     }
 
+    section > div {
+        @media screen and (max-width: 330px) {
+            padding: 0 5px;
+        }
+    }
+
     & > button {
         margin-top: 1.5rem;
     }

@@ -41,29 +41,41 @@ nav > button:hover  {
     color: #fff;
 }
 
-.secaoCards {
-    padding-right: 15px;
-}
-
 .secaoCards > h1 {
     margin-bottom: 35px;
 }
 
+@media screen and (min-width: 800px) and (max-width: 920px) {
+
+    .secaoCards > h1 {
+        font-size: 23px;
+    }   
+}
 
 
-@media only screen and (min-width: 320px) and (max-width: 935px) {
+@media screen and (min-width: 280px) and (max-width: 289px) {
+
+    nav > button {
+        margin: 5px;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 900px) {
 
     .list {
         padding: 0;
         margin: 20px auto;    
     }
-
 }
 
-@media only screen and (min-width: 320px) and (max-width: 580px) {
+@media screen and (min-width: 280px) and (max-width: 580px) {
 
     .listHeader {
         display: block;
         text-align: center;
     }
+
+    .secaoCards > h1 {
+        text-align: center;
+    } 
 }

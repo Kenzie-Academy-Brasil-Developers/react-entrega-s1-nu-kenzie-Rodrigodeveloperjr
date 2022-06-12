@@ -20,7 +20,7 @@ const Card = ({ cards, handleCard }) => {
                     <div className="divPreco">
                         <span className="preco">R$ {card.valor}</span>
 
-                        <img onClick={ () => handleCard(card) } alt="Lixeira" />
+                        <div onClick={ () => handleCard(card) } />
                     </div>
                 </div>
             </StyledCard>

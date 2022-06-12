@@ -1,5 +1,6 @@
 import styled from "styled-components"
-
+import lixeira from "../../assets/lixeira.png"
+import lixeira_hover from "../../assets/lixeira-hover.png"
 
 export const StyledCard = styled.div`
 
@@ -75,18 +76,18 @@ export const StyledCard = styled.div`
         }
     }
 
-    .divPreco > img {
+    .divPreco > div {
         width: 22px;
         height: 22px;
         margin: 15px 10px 0 0;
         cursor: pointer;
         background: #E9ECEF;
-        background-image: url("../../assets/lixeira.png");
+        background: url(${lixeira});
 
         font-size: 12px;
     }
 
-    .divPreco > img:hover {
-        background-image: url("../../assets/lixeira-hover.png");
+    .divPreco > div:hover {
+        background: url(${lixeira_hover});
     }
 `
